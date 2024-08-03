@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NextStep - AI-Powered Mock Job Interview Platform</title>
+        <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/dist/css/style.css') }}">
+        <script src="{{url_for('static', filename='LandingPageScript.js')}}"></script>
+    </head>
+	<body>
+		<section class="staticBar">
+            <span class="material-symbols-outlined" id="barIcon">work</span>
+            <h1 href="{{ url_for('home') }}">NextStep</h1>
+            <a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('about')}}">About Us</a>
+            <a class="userStatus" href="{{ url_for('login')}}">
+                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
+                <div style="display: flex; flex-direction: column; padding: 1px;">
+                    <span style="font-size: 15px;">Signed Out</span>
+                    <span id="login" style="font-size: 12px;">Login?</span>
+                </div>               
+            </a>
+            <a class="userStatus" style="display: none;" href="{{ url_for('login')}}">
+                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
+                <div style="display: flex; flex-direction: column; padding: 1px;">
+                    <span style="font-size: 15px;">Shariq C</span>
+                    <span id="login" style="font-size: 12px; color: rgb(198, 198, 198);">Sign out</span>
+                </div>               
+            </a>
+            <label class="switch">
+                <input type='checkbox' id="themeSlider">
+                <span class='slider'></span>
+            </label>
+        </section>
+	
+		<div class="sectionContainer1">
+			<h2>Welcome to NextStep!</h2>
+			<p><strong>NextStep</strong> is an AI-powered mock interview platform designed to help individuals of all backgrounds and abilities excel in job interviews. By offering realistic simulations, personalized feedback, and adaptive interfaces, NextStep supports users with disabilities and varying education levels, providing them with the tools and confidence they need to succeed in real-world job applications.</p>
+	
+			<p>Join us in preparing for a brighter future with confidence and skill. <a href="https://www.google.com/" target = "_blank" class="menus">Learn more</a> about how NextStep can help you succeed in your job search.</p>
+		</div>
+	
+		<div class="sectionContainer2">
+			<h2>Our Mission</h2>
+			<p>Our mission at <strong>NextStep</strong> is to empower individuals of all backgrounds and abilities by providing a comprehensive, AI-driven mock interview platform. We aim to enhance job readiness and confidence through tailored feedback, adaptive interfaces, and accessible educational resources, ensuring that everyone, regardless of their challenges or education level, has the opportunity to succeed in their career pursuits.</p>
+	
+		</div>
+	
+		<div class="sectionContainer2">
+			<h2>Some of Our Features</h2>
+			<section id="features">
+				<!-- Voice Interaction Feature -->
+				<div class="resource-box">
+					<img src="https://img.freepik.com/premium-vector/voice-messages-icon-voice-recognition-with-microphone-sound-wave_349999-1228.jpg" alt="Voice Interaction">
+					<div class="resource-details">
+						<h3>Voice Interaction</h3>
+						<p>Allow users to interact with the AI using voice commands and receive responses via text-to-speech.</p>
+					</div>
+				</div>
+				<!-- Diverse Scenarios Feature -->
+				<div class="resource-box">
+					<img src="https://apcoworldwide.com/_gatsby/file/3ef4a2cb6021f768c65d267e18fe8f53/Diverse-Workforce.jpg?u=http%3A%2F%2Fbuild.apcodev.net%2Fwp-content%2Fuploads%2F2021%2F02%2FDiverse-Workforce.jpg" alt="Diverse Scenarios">
+					<div class="resource-details">
+						<h3>Diverse Scenarios</h3>
+						<p>Incorporate a variety of mock interview scenarios to cover different roles, industries, and complexity levels.</p>
+					</div>
+				</div>
+				<!-- Educational Resources Feature -->
+				<div class="resource-box">
+					<img src="https://ies.ed.gov/ncee/edlabs/regions/appalachia/blogs/images/blog20_1.jpg" alt="Educational Resources">
+					<div class="resource-details">
+						<h3>Educational Resources</h3>
+						<p>Provide links to relevant educational materials, such as interview tips and resume building guides.</p>
+					</div>
+				</div>
+				<!-- Feedback and Metrics Feature -->
+				<div class="resource-box">
+					<img src="https://media.mopinion.com/wp-content/uploads/2019/07/28112104/Customer-feedback-metrics-new.png" alt="Feedback and Metrics">
+					<div class="resource-details">
+						<h3>Feedback and Metrics</h3>
+						<p>Offer overall metrics on interview performance, including a summary of responses, suggestions for improvement, and a score out of 100.</p>
+					</div>
+				</div>
+				<!-- Adjustable Text Feature -->
+				<div class="resource-box">
+					<img src="https://static1.squarespace.com/static/5b6d12b7e2ccd130a4664d1a/5b6da356cd836691f8a1e17c/64f9aee99cd7de20c3d94d4f/1694085983882/IMG_0196.jpeg?format=1500w" alt="Adjustable Text">
+					<div class="resource-details">
+						<h3>Adjustable Text</h3>
+						<p>Implement customizable text size and color schemes for users with visual impairments.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	
+	
+		<script src="script.js"></script>
+	</body>
+</html>

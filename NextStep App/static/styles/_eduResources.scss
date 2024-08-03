@@ -1,0 +1,228 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// body {
+//     font-family: "Montserrat", sans-serif;
+//     color: #fff;
+//     background-color: #191C1D;
+//     padding: 20px;
+//     min-height: 100vh;
+// }
+
+// .staticBar {
+//     display: flex;
+//     align-items: center;
+//     height: 60px;
+//     background: linear-gradient(to right, #DED6FF, #D0EBFF);
+//     color: #000;
+//     border-radius: 50px;
+//     padding: 0 20px;
+//     margin-bottom: 20px;
+// }
+
+// .staticBar h1 {
+//     margin-left: 15px;
+//     font-size: 24px;
+// }
+
+// .switch {
+//     display: flex;
+//     align-items: center;
+//     margin-left: auto;
+// }
+
+// .slider {
+//     position: relative;
+//     width: 60px;
+//     height: 30px;
+//     background-color: #28292c;
+//     border-radius: 100px;
+//     cursor: pointer;
+//     transition: background-color 0.3s;
+// }
+
+// .slider::before {
+//     content: "";
+//     position: absolute;
+//     top: 3px;
+//     left: 3px;
+//     width: 24px;
+//     height: 24px;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     transition: transform 0.3s;
+// }
+
+// #themeSlider:checked + .slider {
+//     background-color: #b8b9bb;
+// }
+
+// #themeSlider:checked + .slider::before {
+//     transform: translateX(30px);
+// }
+
+.sectionContainer1 {
+    background-color: #2B2B2B;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+}
+
+.sectionContainer1 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sectionContainer1 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sectionContainer2 {
+    background-color: #2B2B2B;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sectionContainer2 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sectionContainer2 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sectionContainer3 {
+    background-color: #2B2B2B;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sectionContainer3 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sectionContainer3 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sectionContainer4 {
+    background-color: #2B2B2B;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sectionContainer4 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sectionContainer4 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sectionContainer5 {
+    background-color: #2B2B2B;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sectionContainer5 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sectionContainer5   p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+// .menus {
+//     color: #8446c7;
+//     text-decoration: none;
+//     font-weight: bold;
+// }
+
+// .menus:hover {
+//     text-decoration: underline;
+// }
+
+.resource-box {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.resource-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.resource-box h3 {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.resource-box h3 a {
+    color: #84a2f3;
+    text-decoration: none;
+}
+
+.resource-box h3 a:hover {
+    text-decoration: underline;
+}
+
+.resource-box p {
+    margin: 10px 0 0;
+    line-height: 1.4;
+}
+
+// body.dark-mode {
+//     background-color: #191C1D;
+//     color: #fff;
+// }
+
+// /* Light mode styles */
+// body.light-mode {
+//     background-color: #fff;
+//     color: #000;
+// }
