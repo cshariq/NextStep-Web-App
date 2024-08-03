@@ -1,0 +1,78 @@
+#camera {
+    background-color: $payment-checkout-container-color;
+    flex: 1 1 45%;
+    // height: 100%;
+}
+
+#camera.light-mode {
+    background-color: #c5c5c5;
+    color: #191C1D;
+}
+
+#camera.dark-mode {
+    background-color: $payment-checkout-container-color;
+    color: #f4f4f4;
+}
+
+.pill-button {
+    // position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.pill-button:hover {
+    filter:brightness(1.1)
+}
+
+.pill-button.green:hover{
+    filter: brightness(1);
+}
+
+.pill-button.green {
+    margin-bottom: 10px;
+    cursor: auto;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20%;
+    background: linear-gradient(to left, #E6FFDE, #C4CBFF);
+}
+
+
+.pill-button.red {
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #FFA8A8;
+}
+
+.pill-button.settings {
+    width: 45px; 
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-left: -50px;
+}
+
+.right-container {
+    float: right; 
+    display: flex;
+}
+
+#settings {
+    font-size: 90%;
+    color: white;
+}
+
+.black-box {
+    flex-grow: 1;
+    max-height: 93%;
+    max-width: 100%;
+    background-color: black;
+    border-radius: 20px;
+}
