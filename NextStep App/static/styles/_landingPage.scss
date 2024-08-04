@@ -181,7 +181,7 @@ h1 {
 .features-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -261,4 +261,23 @@ h1 {
 
 .view-chatbot-button:hover {
     background-color: #0056b3;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-resources-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-resources-button:hover {
+    background-color: #0056b3; 
 }

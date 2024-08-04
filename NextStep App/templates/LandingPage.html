@@ -19,18 +19,35 @@
     </head>
 	<body>
 		<section class="staticBar">
-			<h1>NextStep</h1>
-			<label class="switch">
-				<input type="checkbox" id="themeSlider">
-				<span class="slider"></span>
-			</label>
-		</section>
+            <span class="material-symbols-outlined" id="barIcon">work</span>
+            <h1 href="{{ url_for('home') }}">NextStep</h1>
+            <a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('resources')}}">Resources</a>
+			<a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('questionnaire')}}">ChatBot</a>
+            <!-- <a class="userStatus" href="{{ url_for('login')}}">
+                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
+                <div style="display: flex; flex-direction: column; padding: 1px;">
+                    <span style="font-size: 15px;">Signed Out</span>
+                    <span id="login" style="font-size: 12px;">Login?</span>
+                </div>               
+            </a>
+            <a class="userStatus" style="display: none;" href="{{ url_for('login')}}">
+                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
+                <div style="display: flex; flex-direction: column; padding: 1px;">
+                    <span style="font-size: 15px;">Shariq C</span>
+                    <span id="login" style="font-size: 12px;">Sign out</span>
+                </div>               
+            </a> -->
+            <label class="switch">
+                <input type='checkbox' id="themeSlider">
+                <span class='slider'></span>
+            </label>
+        </section>
 	
 		<div class="sectionContainer1">
 			<h2>Welcome to NextStep!</h2>
 			<p><strong>NextStep</strong> is an AI-powered mock interview platform designed to help individuals of all backgrounds and abilities excel in job interviews. By offering realistic simulations, personalized feedback, and adaptive interfaces, NextStep supports users with disabilities and varying education levels, providing them with the tools and confidence they need to succeed in real-world job applications.</p>
 	
-			<p>Join us in preparing for a brighter future with confidence and skill. <a href="https://www.google.com/" target = "_blank" class="menus">Learn more</a> about how NextStep can help you succeed in your job search.</p>
+			<p>Join us in preparing for a brighter future with confidence and skill. <a href="#features" class="menus">Learn more</a> about how NextStep can help you succeed in your job search.</p>
 		</div>
 	
 		<div class="sectionContainer2">
@@ -74,28 +91,20 @@
 						<p>Offer overall metrics on interview performance, including a summary of responses, suggestions for improvement, and a score out of 100.</p>
 					</div>
 				</div>
-				<!-- Adjustable Text Feature -->
-				<div class="resource-box">
-					<img src="https://static1.squarespace.com/static/5b6d12b7e2ccd130a4664d1a/5b6da356cd836691f8a1e17c/64f9aee99cd7de20c3d94d4f/1694085983882/IMG_0196.jpeg?format=1500w" alt="Adjustable Text">
-					<div class="resource-details">
-						<h3>Adjustable Text</h3>
-						<p>Implement customizable text size and color schemes for users with visual impairments.</p>
-					</div>
-				</div>
+				
 			</section>
+			<div class="button-container">
+				<a href="{{ url_for('resources')}}" class="view-resources-button">View Resources</a>
+			</div>
 		</div>
 		<div class="sectionContainer2">
 			<h2>The Chatbot</h2>
 			<p>Our advanced chatbot leverages a TensorFlow model to track user posture and ensure optimal interaction during mock interviews. Powered by Gemini, the chatbot poses questions specifically tailored to the user's needs and creates a scoring system to evaluate performance comprehensively. This personalized approach helps users identify strengths and areas for improvement, making the interview preparation process more effective and targeted.</p>
 			
 			<div class="button-container">
-				<a href="MockInterviewPage.html" class="view-chatbot-button">View Chatbot</a>
-			</div>
-			
+				<a href="{{ url_for('questionnaire')}}" class="view-chatbot-button">View Chatbot</a>
+			</div>			
 		</div>
-		
-	
-	
-		<script src="script.js"></script>
+
 	</body>
 </html>

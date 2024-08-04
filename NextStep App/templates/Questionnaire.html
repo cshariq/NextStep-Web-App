@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/dist/css/style.css') }}">
+    <script src="{{url_for('static', filename='questionnare.js')}}"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Personal Information Survey</h1>
+        <form action="/submit-survey" method="post">
+            <!-- Disability Question -->
+            <label for="disability">Do you have any disabilities?</label>
+            <select id="disability" name="disability" onchange="toggleDisabilityDetails()">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <div id="disability-details" style="display: none;">
+                <label for="disability-details-input">If yes, specify:</label>
+                <input type="text" id="disability-details-input" name="disability_details" placeholder="Specify your disability">
+            </div>
+
+            <!-- Education Level Question -->
+            <label for="education">What is your education level?</label>
+            <select id="education" name="education" onchange="toggleEducationDetails()">
+                <option value="none">None</option>
+                <option value="highschool">High School</option>
+                <option value="college-university">College/University</option>
+            </select>
+            <div id="education-details" style="display: none;">
+                <label for="institution">If applicable, what college/university?</label>
+                <input type="text" id="institution" name="institution" placeholder="College/University">
+                
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major" placeholder="Major">
+            </div>
+
+            <!-- Age Question -->
+            <label for="age">How old are you?</label>
+            <input type="number" class="input-questionnaire" id="age" name="age" placeholder="Your age" required>
+
+            <!-- Job Interview Preparation Question -->
+            <label for="first-job">Is this preparation for your first job interview?</label>
+            <select id="first-job" name="first_job">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- Roles/Positions Question -->
+            <label for="desired-roles">What role/position are you looking for?</label>
+            <input type="text" class="input-questionnaire" id="desired-roles" name="desired_roles" placeholder="e.g., Software Developer, Marketing Specialist" required>
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

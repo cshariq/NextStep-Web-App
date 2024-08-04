@@ -18,19 +18,21 @@
     <section class="staticBar">
         <span class="material-symbols-outlined" id="barIcon">work</span>
         <h1 href="{{ url_for('home') }}">NextStep</h1>
-        <a class="menus" style="margin-left: 10px;" href="{{ url_for('about')}}">About Us</a>
-        <a class="userStatus" href="{{ url_for('login')}}">
+        <a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('about')}}">About Us</a>
+        <a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('questionnaire')}}">ChatBot</a>
+
+        <!-- <a class="userStatus" href="{{ url_for('login')}}">
             <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
             <div style="display: flex; flex-direction: column; padding: 1px;">
                 <span style="font-size: 15px;">Signed Out</span>
                 <span id="login" style="font-size: 12px;">Login?</span>
             </div>               
-        </a>
+        </a> -->
         <a class="userStatus" style="display: none;" href="{{ url_for('login')}}">
             <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
             <div style="display: flex; flex-direction: column; padding: 1px;">
                 <span style="font-size: 15px;">Shariq C</span>
-                <span id="login" style="font-size: 12px; color: rgb(198, 198, 198);">Sign out</span>
+                <span id="login" style="font-size: 12px;">Sign out</span>
             </div>               
         </a>
         <label class="switch">
@@ -38,6 +40,8 @@
             <span class='slider'></span>
         </label>
     </section>
+
+    <br><h2 style="text-align: center; margin: 20px 0;">Click images to view the resources!</h2><br>
 
     <div class="sectionContainer1">
         <h2>Resume Tips</h2>
@@ -134,7 +138,7 @@
         <section id="disability-resources">
             <div class="resource-box">
                 <a href="https://www.evenbreak.co.uk/" target="_blank">
-                    <img src="https://via.placeholder.com/100" alt="Disability Resources Image">
+                    <img src="https://media.licdn.com/dms/image/D4E0BAQEl93vHYET__g/company-logo_200_200/0/1701680749227/evenbreak_logo?e=2147483647&v=beta&t=AnZoRmJBi2xa7Ycl6luSt8W8HWdekZBudQpKNMlrGrs" alt="Disability Resources Image">
                 </a>
                 <div class="resource-details">
                     <p>An award-winning job board for disabled people, offering job listings from inclusive employers and career advice tailored to disabled candidates.</p>
@@ -148,14 +152,6 @@
                     <p>Offers job listings, career advice, and resources tailored to individuals with disabilities seeking employment with disability-friendly employers.</p>
                 </div>
             </div>
-            <div class="resource-box">
-                <a href="" target="_blank">
-                    <img src="https://via.placeholder.com/100" alt="Disability Resources Image">
-                </a>
-                <div class="resource-details">
-                    <p>N/A</p>
-                </div>
-            </div>
         </section>
     </div>
 
@@ -164,7 +160,7 @@
         <section id="education-resources">
             <div class="resource-box">
                 <a href="https://autism.org/employment-resources-for-individuals-with-autism/" target="_blank">
-                    <img src="https://via.placeholder.com/100" alt="Education Resources Image">
+                    <img src="https://autism.org/wp-content/uploads/2024/04/ARI_Logo_2024_Vert_HOMEPAGE.png" alt="Education Resources Image">
                 </a>
                 <div class="resource-details">
                     <p>Offers employment resources specifically for individuals with autism, including guides to effective job searches and entrepreneurship.</p>
@@ -172,7 +168,7 @@
             </div>
             <div class="resource-box">
                 <a href="https://www.neurodiversityhub.org/" target="_blank">
-                    <img src="https://via.placeholder.com/100" alt="Education Resources Image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfBDt5WmPlBPpiN7eThL-BFL2njoktnYwRg&s" alt="Education Resources Image">
                 </a>
                 <div class="resource-details">
                     <p>Offers resources for neurodivergent individuals, including work experience, internships, and employment opportunities to improve employability.</p>
@@ -180,7 +176,7 @@
             </div>
             <div class="resource-box">
                 <a href="https://www.theeducationpeople.org/our-expertise/specialist-employment/supported-employment-for-jobseekers/" target="_blank">
-                    <img src="https://via.placeholder.com/100" alt="Education Resources Image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX8beQCIKOEhk7adQL5QYtdWBqUULGXB-eQ&s" alt="Education Resources Image">
                 </a>
                 <div class="resource-details">
                     <p>Offers supported employment services for jobseekers with additional needs, including those with lesser education.</p>

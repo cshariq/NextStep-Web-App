@@ -145,7 +145,7 @@ h1 {
   cursor: auto;
   display: inline-block;
   padding-left: 20px;
-  padding-right: 20%;
+  padding-right: 20px;
   background: linear-gradient(to left, #E6FFDE, #C4CBFF);
 }
 
@@ -236,104 +236,6 @@ h1 {
   transform: translateX(28.5px);
   background-color: var(--dark);
   box-shadow: none;
-}
-
-h1 {
-  margin: 10px;
-}
-
-.form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin: 10px 0 5px;
-}
-
-input[type=text],
-input[type=password],
-input[type=email] {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type=submit] {
-  padding: 10px;
-  border: none;
-  background-color: #4CAF50;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.toggle-form {
-  text-align: center;
-  margin-top: 10px;
-}
-
-#login-form {
-  background-color: black;
-  padding: 150px;
-  padding-right: 300px;
-  padding-left: 300px;
-  border-radius: 30px;
-}
-
-#signup-form {
-  background-color: black;
-  padding: 150px;
-  padding-right: 300px;
-  padding-left: 300px;
-  border-radius: 30px;
-}
-
-#login-form.dark-mode {
-  background-color: #000000;
-  color: #f4f4f4;
-}
-
-#login-form.light-mode {
-  background-color: rgb(222, 222, 222);
-  color: black;
-}
-
-.toggle-form a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.toggle-form a:hover {
-  text-decoration: underline;
-}
-
-body.light-mode {
-  background-color: #f4f4f4;
-  color: #191C1D;
-}
-
-body.dark-mode {
-  background-color: #1D1D1D;
-  color: #f4f4f4;
-}
-
-.error {
-  color: red;
-  font-weight: bold;
 }
 
 .sectionContainer {
@@ -456,6 +358,7 @@ body.dark-mode {
 
 .circle-button {
   position: relative;
+  margin-right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,17 +381,23 @@ body.dark-mode {
   margin: 0 auto;
 }
 
-/* width */
+#audio {
+  align-items: center;
+  justify-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(117, 117, 117);
   border-radius: 10px;
@@ -496,7 +405,6 @@ body.dark-mode {
   margin-bottom: 100px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
@@ -524,7 +432,7 @@ body.dark-mode {
   border: 5px solid #d8b8b8;
   border-radius: 1000%;
   border-top: 5px solid #B591F8;
-  animation: spin 1s linear infinite; /* Start animation when active */
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -535,6 +443,151 @@ body.dark-mode {
     transform: rotate(360deg);
   }
 }
+#displayAudio {
+  display: flex;
+  align-items: center;
+}
+
+#audio-button {
+  margin-right: 10px;
+}
+
+#waveform {
+  flex-grow: 1;
+  height: 100%;
+  cursor: pointer;
+}
+
+#waveform .progress {
+  color: #B591F8;
+}
+
+.button-background {
+  background-color: gray;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the buttons */
+  display: inline-flex;
+}
+
+#chatIcons {
+  margin: 10px;
+}
+
+.chat-button {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  background-color: rgb(92, 92, 92);
+  box-shadow: #000000;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: black;
+  border-radius: 10px;
+}
+
+.popup-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(182, 210, 243);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.settings_slider:before {
+  position: absolute;
+  color: black;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .settings_slider {
+  background-color: #2196F3;
+}
+
+input:checked + .settings_slider:before {
+  transform: translateX(26px);
+}
+
+.settings_slider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+}
+
+input:checked + .settings_slider:after {
+  content: "ON";
+  right: 10px;
+}
+
 .staticBar {
   display: flex;
   height: 50px;
@@ -719,7 +772,7 @@ body.light-mode {
 .features-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -798,6 +851,25 @@ body.light-mode {
 }
 
 .view-chatbot-button:hover {
+  background-color: #0056b3;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-resources-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-resources-button:hover {
   background-color: #0056b3;
 }
 
@@ -942,4 +1014,48 @@ body.light-mode {
 .resource-box p {
   margin: 10px 0 0;
   line-height: 1.4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: black;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.input-questionnaire, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type=submit] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #218838;
 }/*# sourceMappingURL=style.css.map */
