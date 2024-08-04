@@ -120,3 +120,31 @@ function startLoading() {
 function stopLoading() {
     document.getElementById('loader').classList.remove('active');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create an instance of WaveSurfer
+    var wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: 'grey',
+        progressColor: 'darkgrey',
+        backend: 'MediaElement',
+        barWidth: 2,
+        barHeight: 1, // the height of the wave
+        barGap: null // the optional spacing between bars of the wave, if not provided will be calculated in legacy format
+    });
+
+    // Load the audio file
+    wavesurfer.load("static/Over the Horizon 2019.mp3");
+
+    // Sync the audio element with WaveSurfer
+    var audioElement = document.getElementById('audio');
+    audioElement.addEventListener('play', function() {
+        wavesurfer.play();
+    });
+    audioElement.addEventListener('pause', function() {
+        wavesurfer.pause();
+    });
+    audioElement.addEventListener('seeked', function() {
+        wavesurfer.seekTo(audioElement.currentTime / audioElement.duration);
+    });
+});

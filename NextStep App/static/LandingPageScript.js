@@ -33,7 +33,6 @@ function showLogin() {
     document.getElementById('login-form').style.display = 'block';
     document.getElementById('signup-form').style.display = 'none';
 }
-
 function sendMessage() {
     var input = document.querySelector('.textbox').value;
     var newMessage = document.createElement('div');

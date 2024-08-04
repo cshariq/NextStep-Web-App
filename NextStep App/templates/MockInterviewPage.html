@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/dist/css/style.css') }}">
         <script src="{{url_for('static', filename='MockInterviewPageScript.js')}}"></script>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
     </head>
 <body>
     <main>
@@ -47,8 +48,10 @@
                 <div class="messages" id="messageContainer">
                     <div class="message sent">
                         <button class="circle-button">
-                            <span class="material-symbols-outlined" id="mic">volume_up</span>
+                            <span class="material-symbols-outlined" id="mic">volume_up</span> 
                         </button>
+                        <div id="waveform"></div>
+                        <audio id="audio" src="{{url_for('static', filename='Over the Horizon 2019.mp3')}}" controls>
                     </div>
                 </div>
                 <div class="chat-container">
@@ -69,7 +72,7 @@
                     <button class="pill-button settings">
                         <span class="material-symbols-outlined" id="settings">settings</span>
                     </button>
-                    <button class="pill-button red">END</button>
+                    <button class="pill-button red">End</button>
                 </div>
                 <img class="black-box" src="{{ url_for('video_feed') }}">
             </div>

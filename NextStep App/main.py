@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, Response, redirect, url_for, flash
 from generateQuestion import ChatSession
+# from model import Model
 import yaml
 import cv2
 import os
@@ -31,6 +32,7 @@ def generate_frames():
             break
         else:
             # frame = cv2.resize(frame, (240, 480))
+            # cv2.imwrite("image.jpg", frame)
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')

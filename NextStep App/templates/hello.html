@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Waveform</title>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+<body>
+    <div id="waveform"></div>
+    <audio id="audio" src="Over the Horizon 2019.mp3" controls></audio>
+
+    <script>
+        // Create an instance of WaveSurfer
+        var wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            waveColor: 'grey',
+            progressColor: 'darkgrey',
+            backend: 'MediaElement',
+            barWidth: 2,
+            barHeight: 1, // the height of the wave
+            barGap: null // the optional spacing between bars of the wave, if not provided will be calculated in legacy format
+        });
+
+        // Load the audio file
+        wavesurfer.load('Over the Horizon 2019.mp3');
+
+        // Sync the audio element with WaveSurfer
+        var audioElement = document.getElementById('audio');
+        audioElement.addEventListener('play', function() {
+            wavesurfer.play();
+        });
+        audioElement.addEventListener('pause', function() {
+            wavesurfer.pause();
+        });
+        audioElement.addEventListener('seeked', function() {
+            wavesurfer.seekTo(audioElement.currentTime / audioElement.duration);
+        });
+    </script>
+</body>
+</html>

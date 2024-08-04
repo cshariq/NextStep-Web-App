@@ -126,21 +126,7 @@ $text-box-color: #B0B0B0;
   z-index: 10;
 }
 
-// .circle-button::before {
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 35px;
-//   height: 40px;
-//   border-radius: 100%;
-//   content: '';
-//   background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-//   z-index: 0;
-// }
-
 #mic {
-  // position: absolute;
   align-items: center;
   justify-items: center;
   bottom: 0;
@@ -149,18 +135,14 @@ $text-box-color: #B0B0B0;
   margin: 0 auto;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  // box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(117, 117, 117); 
   border-radius: 10px;
@@ -168,7 +150,6 @@ $text-box-color: #B0B0B0;
   margin-bottom: 100px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #000000; 
 }
@@ -195,10 +176,38 @@ $text-box-color: #B0B0B0;
   border: 5px solid  #d8b8b8;
   border-radius: 1000%;
   border-top: 5px solid #B591F8;
-  animation: spin 1s linear infinite; /* Start animation when active */
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+#waveform {
+  width: 100%;
+  height: 50px;
+}
+
+.message.sent {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 100%; /* Ensure the container takes full width */
+  overflow: hidden; /* Prevent overflow issues */
+}
+.circle-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#waveform {
+  flex-grow: 1; /* Allow the waveform to take up remaining space */
+  height: 50px;
 }

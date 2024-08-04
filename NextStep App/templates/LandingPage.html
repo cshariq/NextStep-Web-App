@@ -19,28 +19,12 @@
     </head>
 	<body>
 		<section class="staticBar">
-            <span class="material-symbols-outlined" id="barIcon">work</span>
-            <h1 href="{{ url_for('home') }}">NextStep</h1>
-            <a class="menus" style="margin-left: 10px; color: black;" href="{{ url_for('about')}}">About Us</a>
-            <a class="userStatus" href="{{ url_for('login')}}">
-                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
-                <div style="display: flex; flex-direction: column; padding: 1px;">
-                    <span style="font-size: 15px;">Signed Out</span>
-                    <span id="login" style="font-size: 12px;">Login?</span>
-                </div>               
-            </a>
-            <a class="userStatus" style="display: none;" href="{{ url_for('login')}}">
-                <span class="material-symbols-outlined" style="align-items: center; justify-items: center; font-size: 25px; padding-right: 5px;">account_circle</span>
-                <div style="display: flex; flex-direction: column; padding: 1px;">
-                    <span style="font-size: 15px;">Shariq C</span>
-                    <span id="login" style="font-size: 12px; color: rgb(198, 198, 198);">Sign out</span>
-                </div>               
-            </a>
-            <label class="switch">
-                <input type='checkbox' id="themeSlider">
-                <span class='slider'></span>
-            </label>
-        </section>
+			<h1>NextStep</h1>
+			<label class="switch">
+				<input type="checkbox" id="themeSlider">
+				<span class="slider"></span>
+			</label>
+		</section>
 	
 		<div class="sectionContainer1">
 			<h2>Welcome to NextStep!</h2>
@@ -100,6 +84,16 @@
 				</div>
 			</section>
 		</div>
+		<div class="sectionContainer2">
+			<h2>The Chatbot</h2>
+			<p>Our advanced chatbot leverages a TensorFlow model to track user posture and ensure optimal interaction during mock interviews. Powered by Gemini, the chatbot poses questions specifically tailored to the user's needs and creates a scoring system to evaluate performance comprehensively. This personalized approach helps users identify strengths and areas for improvement, making the interview preparation process more effective and targeted.</p>
+			
+			<div class="button-container">
+				<a href="MockInterviewPage.html" class="view-chatbot-button">View Chatbot</a>
+			</div>
+			
+		</div>
+		
 	
 	
 		<script src="script.js"></script>
